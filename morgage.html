@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Morgage Calculator</title>
 </head>
@@ -18,18 +21,44 @@
             <h1 class="d-flex justify-content-around my-5">Financial Calculator</h1>
         </header>
         <nav>
-            <ul class="nav nav-pills nav-fill">
-                <li class="nav-item mx-3">
-                    <a class="nav-link active" href="morgage.html">Morgage Calculator</a>
+            <ul class="nav nav-pills nav-fill my-5">
+                <li class="nav-item m-3 ">
+                    <a class="nav-link active bg-secondary " href="home.html">Home</a>
+                <li class="nav-item m-3 ">
+                    <a class="nav-link active bg-secondary " href="morgage.html">Morgage Calculator</a>
                 </li>
-                <li class="nav-item mx-3">
-                    <a class="nav-link active" href="cd.html">Compounding Interest Calculator</a>
+                <li class="nav-item m-3">
+                    <a class="nav-link active bg-secondary" href="cd.html">Compounding Interest Calculator</a>
                 </li>
-                <li class="nav-item mx-3">
-                    <a class="nav-link active" href="annuity.html">Ordinary Annuity Calculator</a>
+                <li class="nav-item m-3">
+                    <a class="nav-link active bg-secondary" href="annuity.html">Ordinary Annuity Calculator</a>
                 </li>
             </ul>
         </nav>
+        <form>
+        <div class="container my-5 p-4 border border-grey-500 rounded" >
+            <div class="row">
+                <div class="col-6 bg-secondary bg-opacity-25 rounded-5 p-5 m-5">
+                    <label for="amount" class="fs-4">Loan Amount:</label>
+                    <input id="amountInput" type="number" class="form-control w-75 mt-2 border border-secondary">
+                    <label for="amount" class="fs-4 mt-2">Interest Rate:</label>
+                    <input id="interestInput" type="number" class="form-control w-75 mt-2 border border-secondary">
+                    <label for="amount" class="fs-4 mt-2">Loan Length (in months):</label>
+                    <input id="lengthInput" type="number" class="form-control w-75 mt-2 border border-secondary">
+                    <input id="calculateBtn" class="btn btn-secondary fs-4 mt-4" type="button" value="Calculate">
+                    <input  id="resetBtn" type="reset" class="btn btn-secondary fs-4 mt-4 d-flex justify-content-end" value="Reset">
+                </div>
+                <div class="col bg-secondary bg-opacity-25 rounded-5 p-5 m-5">
+                    <label for="amount" class="fs-4">Monthly Payment:</label>
+                    <input id="paymentOutput" type="number" class="form-control w-75 mt-2 border border-secondary" readonly>
+                    <label for="amount" class="fs-4 mt-2">Total Interest:</label>
+                    <input id="interestOutput" type="number" class="form-control w-75 mt-2 border border-secondary" readonly>
+                </div>
+            </div>
+        </div>
+        </form>
     </main>
+
+    <script src="scripts/morgage.js"></script>
 </body>
 </html>
