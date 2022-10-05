@@ -11,8 +11,8 @@ function init() {
 }
 
 function calculateBtnClicked() {
-  let paymentOutput = document.querySelector("#paymentOutput");
-  let interestOutput = document.querySelector("#interestOutput");
+  const paymentOutput = document.querySelector("#paymentOutput");
+  const interestOutput = document.querySelector("#interestOutput");
   let payment =
     amountInput * (interestInput / (1 - (1 + interestInput) ** -lengthInput));
   let interest = (payment * interestInput) / 12;

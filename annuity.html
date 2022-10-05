@@ -21,7 +21,7 @@
             <h1 class="d-flex justify-content-around my-5">Financial Calculator</h1>
         </header>
         <nav>
-            <ul class="nav nav-pills nav-fill">
+            <ul class="nav nav-pills nav-fill my-5">
                 <li class="nav-item m-3 ">
                     <a class="nav-link active bg-secondary " href="home.html">Home</a>
                 <li class="nav-item mx-3">
@@ -35,6 +35,26 @@
                 </li>
             </ul>
         </nav>
+        <form>
+            <div class="container my-5 p-4 border border-grey-500 rounded" >
+                <div class="row">
+                    <div class="col-6 bg-secondary bg-opacity-25 rounded-5 p-5 m-5">
+                        <label for="amount" class="fs-4">Payment Amount:</label>
+                        <input id="amountInput" type="number" class="form-control w-75 mt-2 border border-secondary">
+                        <label for="amount" class="fs-4 mt-2">Interest Rate (in decimal):</label>
+                        <input id="interestInput" type="number" class="form-control w-75 mt-2 border border-secondary">
+                        <label for="amount" class="fs-4 mt-2">Loan Length (in years):</label>
+                        <input id="lengthInput" type="number" class="form-control w-75 mt-2 border border-secondary">
+                        <input id="calculateBtn" class="btn btn-secondary fs-4 mt-4" type="button" value="Calculate">
+                        <input  id="resetBtn" type="reset" class="btn btn-secondary fs-4 mt-4 d-flex justify-content-end" value="Reset">
+                    </div>
+                    <div class="col bg-secondary bg-opacity-25 rounded-5 p-5 m-5">
+                        <label for="amount" class="fs-4">Present Value:</label>
+                        <input id="paymentOutput" type="number" class="form-control w-75 mt-2 border border-secondary" readonly>
+                    </div>
+                </div>
+            </div>
+        </form>        
     </main>
 </body>
 </html>
